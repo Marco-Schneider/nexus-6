@@ -2,6 +2,9 @@
 #define _NEXUS_H_
 
 #include <stdint.h>
+#include <Arduino.h>
+#include <QTRSensors.h>
+#include <SparkFun_TB6612.h>
 
 #define LED_BUILTIN 2
 
@@ -16,10 +19,10 @@
 
 #define SPEED 255
 
-const uint8_t numberOfSensors = 8;
-uint8_t lineSensorPins[numberOfSensors] = {34, 35, 32, 33, 25, 26, 27, 14};
-
 #define RIGHT_SENSOR 36
 #define LEFT_SENSOR 39
+
+void configureLineSensor(QTRSensors &lineSensor);
+void calibrateLineSensor(QTRSensors &lineSensor);
 
 #endif
