@@ -16,7 +16,7 @@ void calibrateLineSensor(QTRSensors &lineSensor) {
     pinMode(LED_BUILTIN, OUTPUT);
     digitalWrite(LED_BUILTIN, HIGH);
         
-    for(uint16_t i=0; i<1000; i++) {
+    for(uint16_t i=0; i<500; i++) {
         lineSensor.calibrate();
     }
 
@@ -25,4 +25,8 @@ void calibrateLineSensor(QTRSensors &lineSensor) {
         delay(500);
     }
 
+}
+
+float mapLinePosition(float x, float inMin, float inMax, float outMin, float outMax) {
+    return (x - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
 }

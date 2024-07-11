@@ -25,4 +25,6 @@
 void configureLineSensor(QTRSensors &lineSensor);
 void calibrateLineSensor(QTRSensors &lineSensor);
 
+float mapLinePosition(float x, float inMin, float inMax, float outMin, float outMax);
+
 #endif
