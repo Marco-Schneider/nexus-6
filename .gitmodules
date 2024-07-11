@@ -1,6 +1,6 @@
-[submodule "include/qtr-sensors-arduino"]
-	path = include/qtr-sensors-arduino
+[submodule "lib/qtr-sensors-arduino"]
+	path = lib/qtr-sensors-arduino
 	url = https://github.com/pololu/qtr-sensors-arduino.git
-[submodule "include/SparkFun_TB6612FNG_Arduino_Library"]
-	path = include/SparkFun_TB6612FNG_Arduino_Library
+[submodule "lib/SparkFun_TB6612FNG_Arduino_Library"]
+	path = lib/SparkFun_TB6612FNG_Arduino_Library
 	url = https://github.com/sparkfun/SparkFun_TB6612FNG_Arduino_Library.git
