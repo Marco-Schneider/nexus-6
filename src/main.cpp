@@ -59,10 +59,8 @@ void loop() {
                     1.0
                 );
                 float correction = pid.calculateCorrection(linePosition);
-                SerialBT.print("linePosition: ");
-                SerialBT.println(linePosition);
-                SerialBT.print("Correction: ");
-                SerialBT.println(correction);
+                leftMotor.drive(constrain((1 - correction) * SPEED, (-1/5) * SPEED, SPEED));
+                rightMotor.drive(constrain((1 + correction) * SPEED, (-1/5) * SPEED, SPEED));
             }
 
             SerialBT.begin(BLUETOOTH_NAME);
